@@ -1,0 +1,27 @@
+
+<h1>{{ title }}</h1>
+<p>current lang is {{ lang }}</p>
+<div class="triangel">
+  <div class="form_triangel">
+    <form>
+      <div>
+        <label for="vala">{{ textA }}</label>
+        <input type="text" [(ngModel)]='valA' name="vala">
+      </div>
+      <div>
+        <label for="valb">{{ textB }}</label>
+        <input type="text" [(ngModel)]='valB' name="valb">
+      </div>
+      <div>
+        <label for="valc">{{ textC }}</label>
+        <input type="text" [(ngModel)]='valC' name="valc">
+      </div>
+    </form>
+    <div>
+        <button (click)="onClickMe()">Click me!</button>
+    </div>
+  </div>
+  <div class="result">
+    res {{ answer }}
+  </div>
+</div>

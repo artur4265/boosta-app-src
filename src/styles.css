@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 90vh;
+    background: coral;
+}
+
+header {
+    width: 100%;
+    background: #000;
+    height: 50px;
+    color: azure;
+}
+
+footer {
+    width: 100%;
+    background: #000;
+    height: 50px;
+    color: azure;  
+}
