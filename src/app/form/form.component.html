@@ -1,27 +1,33 @@
-
+<div class="top row --mat-card">
 <h1>{{ title }}</h1>
-<p>current lang is {{ lang }}</p>
-<div class="triangel">
-  <div class="form_triangel">
-    <form>
-      <div>
+  <div class="lang">
+    <p>{{ langText }}</p>
+    <button (click)="changeLang()">{{ lang }}</button>
+  </div>
+</div>
+
+<div class="triangel row">
+  <div class="form_triangel col --mat-card">
+    <form class="row">
+      <div class="field">
         <label for="vala">{{ textA }}</label>
         <input type="text" [(ngModel)]='valA' name="vala">
       </div>
-      <div>
+      <div class="field">
         <label for="valb">{{ textB }}</label>
         <input type="text" [(ngModel)]='valB' name="valb">
       </div>
-      <div>
+      <div class="field">
         <label for="valc">{{ textC }}</label>
         <input type="text" [(ngModel)]='valC' name="valc">
       </div>
     </form>
-    <div>
-        <button (click)="onClickMe()">Click me!</button>
+    <div class="row">
+        <button (click)="sendReq()">{{ sendText }}</button>
     </div>
   </div>
-  <div class="result">
-    res {{ answer }}
+
+  <div class="result col --mat-card" [ngClass]="{'danger': danger, 'success': success, 'warning': warning }">
+    {{ answerText }} {{ answer }}
   </div>
 </div>

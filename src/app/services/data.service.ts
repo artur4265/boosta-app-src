@@ -7,11 +7,11 @@ export class DataService {
 
 
   constructor(public http:Http) { 
-    console.log('service work')
+    console.log('service Http work');
   }
 
-  sendData(url, allValue) {
-    return this.http.post(url, allValue)
+  sendData(url) {
+    return this.http.get(url)
       .map(res => res.json())
   }
 
